@@ -14,9 +14,16 @@ public class MergeSortedArrays{
          * int[] nums1 - Array to add the new value to.
          * int index - Where to add the new value in nums1[].
          * int val - Value of nums2 to add to nums1.
+         * int L1 - Current length of L1.
          */
-        public void insert(){
+        public void insert(int[] nums1, int index, int val, int L1){
+                
+                //Need to loop through nums1 and move everything over by one.
+                for(int i = (L1-1); i > index; i--){
+                        nums1[i+1] = nums[i];           //Move each element to the left by one.
+                }
 
+                nums1[index] = val;          //Add the new value to nums1.
         }
 
         /*
