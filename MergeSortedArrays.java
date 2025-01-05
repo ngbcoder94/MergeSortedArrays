@@ -9,6 +9,17 @@
 public class MergeSortedArrays{
         
         /*
+         * Here is my insert function that will allow me to add the new value of nums2 to nums1.
+         *
+         * int[] nums1 - Array to add the new value to.
+         * int index - Where to add the new value in nums1[].
+         * int val - Value of nums2 to add to nums1.
+         */
+        public void insert(){
+
+        }
+
+        /*
          * Here is my function that will Sort and merge the two arrays.
          *
          * @param int[] nums1, nums2 - Two arrays that contain the arrays I am working with.
