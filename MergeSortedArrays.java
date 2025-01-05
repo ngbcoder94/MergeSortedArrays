@@ -20,7 +20,7 @@ public class MergeSortedArrays{
                 
                 //Need to loop through nums1 and move everything over by one.
                 for(int i = (L1-1); i > index; i--){
-                        nums1[i+1] = nums[i];           //Move each element to the left by one.
+                        nums1[i+1] = nums1[i];           //Move each element to the left by one.
                 }
 
                 nums1[index] = val;          //Add the new value to nums1.
@@ -44,7 +44,7 @@ public class MergeSortedArrays{
                                 
                                 //Here I check if the current element of nums2 <= current element of nums1.
                                 if(nums2[i] <= nums1[j]){
-                                        insert(nums1, j, nums2[i]);     //Insert the new value into nums1.
+                                        insert(nums1, j, nums2[i], L1);     //Insert the new value into nums1.
                                         L1 +=1;                         //Increment L1 by one since we added a value.
                                 }
 
