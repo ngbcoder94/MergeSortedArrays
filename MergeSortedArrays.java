@@ -18,7 +18,15 @@ public class MergeSortedArrays{
          */
         public void solution(int[] nums1, int[] nums2, int L1, int L2){
                 
-                
+                //Need to loop through nums2 first
+                for(int i = 0; i < L2; i++){
+
+                        //Then I need to loop through nums1 for each iteration of i - aka bubble sort.
+                        for(int j = 0; j < L1; j++){
+                                
+
+                        }
+                }
         }
         public static void main(String[] args){
                 
