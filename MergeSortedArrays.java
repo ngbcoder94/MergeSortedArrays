@@ -68,12 +68,12 @@ public class MergeSortedArrays{
         }
         public static void main(String[] args){
                 
-                int[] testArr1 = {1, 3, 5, 0, 0, 0};                        //Create nums1 for testing.
-                int[] testArr2 = {0, 2, 4};                           //Create nums2 for testing.
+                int[] testArr1 = {1, 0, 0, 0};                        //Create nums1 for testing.
+                int[] testArr2 = {0, 3, 4};                           //Create nums2 for testing.
 
                 MergeSortedArrays tmpObj = new MergeSortedArrays();         //Create instance of MergeSortedArrays for testing.
 
-                tmpObj.solution(testArr1, testArr2, 3, 3);                  //Call solution and run test.
+                tmpObj.solution(testArr1, testArr2, 1, 3);                  //Call solution and run test.
                 
                 //Loop through testArr1 to see if these were merged and sorted correctly.
                 for(int i = 0; i < testArr1.length; i ++){
