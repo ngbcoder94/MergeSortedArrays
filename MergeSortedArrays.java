@@ -37,6 +37,18 @@ public class MergeSortedArrays{
          */
         public void solution(int[] nums1, int[] nums2, int L1, int L2){
                 
+                //Need to check some base cases: 
+                if(L1 == 0){
+                        
+                        //Need to loop through the array and move nums2 --> nums1
+                        for(int i = 0; i < L2; i++){
+                                nums1[i] = nums2[i];
+                        }
+                }
+                else if(L2 == 0){
+                        return;
+                }
+
                 //Need to loop through nums2 first
                 for(int i = 0; i < L2; i++){
 
@@ -62,19 +74,21 @@ public class MergeSortedArrays{
                                 else if((i == (L2-1)) && (j == (L1-1)) && (nums2[i] > nums1[j])){
                                         nums1[L1] = nums2[i];           //Add the last value to the array nums1.
                                 }
-
                         }
                 }
         }
+
         public static void main(String[] args){
                 
-                int[] testArr1 = {1, 0, 0, 0};                        //Create nums1 for testing.
-                int[] testArr2 = {0, 3, 4};                           //Create nums2 for testing.
+                int[] testArr1 = {0, 0, 0, 0, 0};                        //Create nums1 for testing.
+                int[] testArr2 = {1, 2, 3, 4, 5};                           //Create nums2 for testing.
 
                 MergeSortedArrays tmpObj = new MergeSortedArrays();         //Create instance of MergeSortedArrays for testing.
 
-                tmpObj.solution(testArr1, testArr2, 1, 3);                  //Call solution and run test.
+                tmpObj.solution(testArr1, testArr2, 0, 5);                  //Call solution and run test.
                 
+                //testArr1 = testArr2;
+
                 //Loop through testArr1 to see if these were merged and sorted correctly.
                 for(int i = 0; i < testArr1.length; i ++){
                         System.out.println(testArr1[i]);
